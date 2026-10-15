@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self';" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <title>UDCI GMP Manufacturing Suite 26.0</title>
+  <meta name="description" content="UDCI GMP Manufacturing Suite — on-device GMP records for iPSC-derived islet manufacturing." />
+
+  <!-- PWA / iOS home-screen install -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#12324e" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="UDCI GMP" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="icons/icon-167.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+
+  <style>
+    html, body { background: #0e1419; }
+    /* splash shown until the app renders */
+    #boot-splash { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 14px; background: linear-gradient(160deg,#12344e,#0c4a56); z-index: 9; }
+    #boot-splash img { width: 180px; height: auto; filter: brightness(1.05); }
+    #boot-splash .s { color: #9fe6df; font: 600 13px/1.4 -apple-system, system-ui, sans-serif; letter-spacing: .3px; }
+    #root:not(:empty) + #boot-splash { display: none; }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <div id="boot-splash">
+    <img src="icons/udci.png" alt="UDCI" />
+    <div class="s">GMP Manufacturing Suite 26.0 — loading…</div>
+  </div>
+
+  <!-- engine (local store + bridge) first, then core, views, boot -->
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+  <script src="views/_ui.js"></script>
+  <script src="views/auth.js"></script>
+  <script src="views/dashboard.js"></script>
+  <script src="views/batches.js"></script>
+  <script src="views/batch-detail.js"></script>
+  <script src="views/inventory.js"></script>
+  <script src="views/samples.js"></script>
+  <script src="views/assays.js"></script>
+  <script src="views/audit.js"></script>
+  <script src="views/users.js"></script>
+  <script src="views/settings.js"></script>
+  <script src="boot.js"></script>
+</body>
+</html>

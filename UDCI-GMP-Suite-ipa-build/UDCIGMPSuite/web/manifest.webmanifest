@@ -1,0 +1,19 @@
+{
+  "name": "UDCI GMP Manufacturing Suite",
+  "short_name": "UDCI GMP",
+  "description": "Upstate Diabetes Cure Initiative · SUNY Centre for Advanced Cell Therapy — GMP records for iPSC-derived islet manufacturing, inventory, biobank and assays.",
+  "id": "/udci-gmp-suite/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0e1419",
+  "theme_color": "#12324e",
+  "categories": ["medical", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-1024.png", "sizes": "1024x1024", "type": "image/png" }
+  ]
+}
